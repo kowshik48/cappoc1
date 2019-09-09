@@ -28,12 +28,13 @@ pipeline{
 		}
 		stage('terraform plan'){
 			steps{
-			sh 'ls /var/lib/jenkins/; sudo terraform plan /var/lib/jenkins/workspace/terraformpipeline/cappoc1'
+			sh 'sudo terraform init /var/lib/jenkins/workspace/terraformpipeline/cappoc1'
+			sh 'sudo terraform plan /var/lib/jenkins/workspace/terraformpipeline/cappoc1'
 			}
 		}
 		stage('terraform apply'){
 			steps{
-			sh 'ls /var/lib/jenkins/;  terraform apply -no-color -auto-approve /var/lib/jenkins/workspace/terraformpipeline/cappoc1'
+			sh 'sudo terraform apply -no-color -auto-approve /var/lib/jenkins/workspace/terraformpipeline/cappoc1'
 			}
 		}
 		stage('terraform ended'){
