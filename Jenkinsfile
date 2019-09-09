@@ -23,7 +23,7 @@ pipeline{
 		}
 		stage('terraform init'){
 			steps{
-				sh 'terraform init'
+				sh 'cd /var/lib/jenkins/workspace/terraformpipeline/cappoc1; 'terraform init'
 			}
 		}
 		stage('terraform plan'){
