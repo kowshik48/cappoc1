@@ -27,7 +27,7 @@ pipeline{
 		}
 		stage('terraform plan'){
 			steps{
-			sh 'ls /var/lib/jenkins/; sudo /home/ec2-user/terraform plan /var/lib/jenkins/'
+			sh 'ls /var/lib/jenkins/; sudo terraform plan /var/lib/jenkins/'
 			}
 		}
 		stage('terraform apply'){
