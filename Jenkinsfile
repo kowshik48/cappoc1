@@ -32,7 +32,7 @@ pipeline{
 		}
 		stage('terraform apply'){
 			steps{
-			sh 'ls /var/lib/jenkins/; sudo terraform apply -no-color -auto-approve /var/lib/jenkins/'
+			sh 'ls /var/lib/jenkins/;  terraform apply -no-color -auto-approve /var/lib/jenkins/'
 			}
 		}
 		stage('terraform ended'){
