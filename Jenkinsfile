@@ -17,7 +17,8 @@ pipeline{
 		}
 		stage('tfsvars create'){
 			steps{
-				sh 'sudo cp /home/ec2-user/vars.tf /var/lib/jenkins/'
+				sh 'sudo cp /home/jenkins/backup/vars.tf  /var/lib/jenkins/workspace/terraformpipeline/cappoc1'
+				sh 'cd /var/lib/jenkins/workspace/terraformpipeline/cappoc1'
 			}
 		}
 		stage('terraform init'){
