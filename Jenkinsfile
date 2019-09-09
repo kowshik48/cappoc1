@@ -23,7 +23,7 @@ pipeline{
 		}
 		stage('terraform init'){
 			steps{
-				sh 'cd /var/lib/jenkins/workspace/terraformpipeline/cappoc1; terraform init'
+				sh 'sudo chown -R jenkins:jenkins .terraform/plugins/linux_386/;cd /var/lib/jenkins/workspace/terraformpipeline/cappoc1; terraform init'
 			}
 		}
 		stage('terraform plan'){
