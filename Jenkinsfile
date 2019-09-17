@@ -35,7 +35,6 @@ pipeline{
 		stage('terraform apply'){
 			steps{
 			sh 'sudo terraform apply -no-color -auto-approve /var/lib/jenkins/workspace/terraformpipeline/cappoc1'
-			sh 'sudo cp /var/lib/jenkins/workspace/terraformpipeline/terraform.tfstate /var/lib/jenkins/workspace/terraformpipeline/cappoc1/'
 			}
 		}
 		stage('terraform ended'){
