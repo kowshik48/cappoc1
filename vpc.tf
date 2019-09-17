@@ -1,11 +1,20 @@
 #vpc.tf
 provider "aws" {
 	region = "${var.region}"
-	access_key = "${var.access_key}"
-    secret_key = "${var.secret_key}"
+	#access_key = "${var.access_key}"
+    #secret_key = "${var.secret_key}"
     version = "~> 2.0"
 }
 
+
+terraform {
+  backend "s3" {
+    region  = "us-east-1"
+    bucket  = "capgeminipoc-terraform"
+    key     = "trss/terraform.tfstate"
+    encrypt = true
+  }
+}
 #create VPC dddd
 #=================================================
 resource "aws_vpc" "poc_vpc"{
