@@ -10,7 +10,7 @@ provider "aws" {
 terraform {
   backend "s3" {
     region  = "us-east-1"
-    bucket  = "capgeminipoc-terraform-praveen"
+    bucket  = "capgeminipoc-terraform-praveen-1"
     key     = "trss/terraform.tfstate"
     encrypt = true
   }
