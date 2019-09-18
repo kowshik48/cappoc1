@@ -13,6 +13,7 @@ terraform {
     bucket  = "capgeminipoc-terraform-praveen-1"
     key     = "trss/terraform.tfstate"
     encrypt = true
+    shared_credentials_file = "~/.aws/credentials"
   }
 }
 #create VPC dddd
