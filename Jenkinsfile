@@ -12,7 +12,7 @@ pipeline{
 		}
 		stage('git clone'){
 			steps{
-				sh 'sudo -t rm -rf *;sudo git clone https://github.com/kowshik48/cappoc1.git'
+				sh 'sudo rm -rf *;sudo git clone https://github.com/kowshik48/cappoc1.git'
 			}
 		}
 		stage('tfsvars create'){
