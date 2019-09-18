@@ -3,6 +3,7 @@ provider "aws" {
 	region = "${var.region}"
 	access_key = "${var.access_key}"
     	secret_key = "${var.secret_key}"
+	profile = "non-default-profile"
     	version = "~> 2.0"
 }
 
@@ -13,6 +14,7 @@ terraform {
     bucket  = "capgeminipoc-terraform-praveen-1"
     key     = "trss/terraform.tfstate"
     encrypt = true
+    profile = "non-default-profile"
     shared_credentials_file = "~/.aws/credentials"
   }
 }
