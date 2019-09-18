@@ -39,7 +39,7 @@ pipeline{
 		}
 		stage('terraform ended'){
 			steps{
-				sh 'echo "Ended...ccc..!" '
+				sh 'echo "Ended....!" '
 			}
 		}
 		
