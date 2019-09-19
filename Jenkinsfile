@@ -36,6 +36,10 @@ pipeline{
 			steps{
 			sh 'sudo terraform apply -no-color -auto-approve /var/lib/jenkins/workspace/Infra_Terraform_Pipeline/cappoc1'
 			}
+		stage('StateFile Copy'){
+			steps{
+			sh 'aws s3 cp s3://capgeminipoc-terraform-praveen-1/trss/terraform.tfstate /var/lib/jenkins/workspace/Infra_Terraform_Pipeline'
+			}
 		}
 		stage('terraform ended'){
 			steps{
