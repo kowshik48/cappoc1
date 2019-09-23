@@ -56,10 +56,21 @@ resource "aws_security_group" "poc_vpc_security_group" {
   description  = "My VPC Security Group"
 ingress {
     cidr_blocks = "${var.sgvpcCIDRblock}"  
+    protocol    = -1
+    self      = true
     from_port   = 0
     to_port     = 0
-    protocol    = -1
+    
   }
+	
+egress {
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
 tags = {
         Name = "POC_Security_Group"
   }
