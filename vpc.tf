@@ -69,7 +69,6 @@ egress {
     protocol    = "-1"
     cidr_blocks = ["0.0.0.0/0"]
   }
-}
 
 tags = {
         Name = "POC_Security_Group"
