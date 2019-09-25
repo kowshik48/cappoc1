@@ -7,7 +7,9 @@ pipeline{
 	stages{
 		stage('terraform started'){
 			steps{
+				
 				sh 'echo "Started....!" '
+				sleep 300
 			}
 		}
 		stage('git clone'){
